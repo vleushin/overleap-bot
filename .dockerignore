@@ -1,0 +1,17 @@
+node_modules
+lib
+scripts
+events
+sql
+jest.config.*
+npm-debug.log
+Dockerfile
+.idea
+.git
+.gitignore
+.env*
+.eslintrc.js
+cache
+artifacts
+*.iml
+tests

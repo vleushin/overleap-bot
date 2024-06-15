@@ -1,0 +1,28 @@
+# IDEA
+.idea
+*.iml
+
+# Compiled JavaScript files
+lib
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+dist
+artifacts
+cache
+
+.env
+.env.*
+
+.DS_Store
+
+scripts
+events

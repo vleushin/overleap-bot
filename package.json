@@ -1,0 +1,31 @@
+{
+  "name": "OverleapBot",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "license": "MIT",
+  "scripts": {
+    "compile": "tsc",
+    "start": "ts-node src/main.ts",
+    "start:redis": "docker run -d -p 127.0.0.1:6379:6379 eqalpha/keydb:latest",
+    "dockerBuild": "docker build . -t gcr.io/osbot-prod/overleapbot:latest",
+    "dockerPush": "docker push gcr.io/osbot-prod/overleapbot:latest"
+  },
+  "dependencies": {
+    "@ton/core": "^0.56.3",
+    "@ton/crypto": "^3.2.0",
+    "@ton/ton": "^13.11.1",
+    "@tonconnect/sdk": "^3.0.2",
+    "@types/node": "^20.12.7",
+    "@types/qrcode": "^1.5.5",
+    "dotenv": "^16.4.5",
+    "mixpanel": "^0.18.0",
+    "qrcode": "^1.5.3",
+    "redis": "^4.6.13",
+    "telegraf": "^4.16.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

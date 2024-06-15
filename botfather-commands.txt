@@ -1,0 +1,8 @@
+connect - Connect wallet
+disconnect - Disconnect wallet
+my_wallet - Show my wallet address
+my_price - Show my overleap price
+my_link - Show my overleap link
+set_price - Set my overleap price
+overleap - Start overleap
+faq - Frequently asked questions (FAQ)
