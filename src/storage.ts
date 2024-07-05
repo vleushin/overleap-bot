@@ -40,12 +40,6 @@ class OverleapStorage {
             await redisClient.hSet(usernameToUserIdKey, username.toLowerCase(), userId);
         }
     }
-
-    async deregister(userId: string, username: string): Promise<void> {
-        await redisClient.hDel(userIdToWalletKey, String(userId));
-        await redisClient.hDel(usernameToUserIdKey, username.toLowerCase());
-    }
 }
 
 export const overleapStorage = new OverleapStorage();
-

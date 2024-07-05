@@ -1,15 +1,14 @@
 import Mixpanel from 'mixpanel';
 
 export const mixpanel = Mixpanel.init(process.env.MIXPANEL_TOKEN as string, {
-    debug: true,
-    verbose: true
 });
 
-export const trackEvent = (event: string, ctx: any, extraProperties: any = {}) => {
+export const trackEvent = (event: string, from: any, extraProperties: any = {}) => {
+    console.log("trackEvent: " + event + " , username: " + from.username)
     mixpanel.track(event, {
-        distinct_id: ctx.message.from.id,
-        language_code: ctx.message.from.language_code,
-        is_premium: ctx.message.from.is_premium,
+        distinct_id: from.id,
+        language_code: from.language_code,
+        is_premium: from.is_premium,
         ...extraProperties
     });
 };
